@@ -58,6 +58,7 @@ public class CheckoutCustomer {
         sleepInSeconds(5);
         driver.findElement(By.xpath("//div[@class='alert-content notification-animation']/button")).click();
         sleepInSeconds(2);
+
         // Open Cart page
         driver.findElement(By.xpath("//button[@aria-label='cart']")).click();
         sleepInSeconds(8);
@@ -99,8 +100,8 @@ public class CheckoutCustomer {
         sleepInSeconds(3);
 
         // Place Order
-        //By checkoutButton = By.xpath("//div[@class='payment_container flex flex-col']//following-sibling::button");
-        //driver.findElement(checkoutButton).click();
+        /*By checkoutButton = By.xpath("//div[@class='payment_container flex flex-col']//following-sibling::button");
+        driver.findElement(checkoutButton).click();*/
         jsExcutor.executeScript("arguments[0].click();", CheckoutButton);
         sleepInSeconds(30);
     }
