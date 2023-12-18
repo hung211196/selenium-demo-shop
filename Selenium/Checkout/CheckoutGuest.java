@@ -41,12 +41,13 @@ public class CheckoutGuest {
         driver.get("https://dev-shop-poc.drberg.com/");
         sleepInSeconds(3);
 
-        // Close OneTrust banner
-//        By OneTrustBanner = By.xpath("//div[@id='onetrust-banner-sdk']");
-//        if (driver.findElements(OneTrustBanner).size() > 0 && driver.findElements(OneTrustBanner).get(0).isDisplayed())
-//        {
-//            driver.findElement(By.xpath("//button[@id='onetrust-reject-all-handler']")).click();
-//        }
+        //Close OneTrust banner
+        /*By OneTrustBanner = By.xpath("//div[@id='onetrust-banner-sdk']");
+        if (driver.findElements(OneTrustBanner).size() > 0 && driver.findElements(OneTrustBanner).get(0).isDisplayed())
+        {
+            driver.findElement(By.xpath("//button[@id='onetrust-reject-all-handler']")).click();
+        }*/
+
         // Add Product to Cart
         By addToCart = By.xpath("//a[text()='Chewable Vitamin C Complex']/parent::div/parent::div/following-sibling::div//button");
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();",driver.findElement(addToCart));
@@ -56,6 +57,7 @@ public class CheckoutGuest {
         sleepInSeconds(3);
         driver.findElement(By.xpath("//a[text() = 'View cart']")).click();
         sleepInSeconds(5);*/
+
         // Open Cart page
         By ViewCartPopup = By.xpath("//div[@class='alert-content notification-animation']");
         if (driver.findElement(ViewCartPopup).isDisplayed())
